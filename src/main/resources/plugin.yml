@@ -1,0 +1,8 @@
+name: PixelLoginPlugin
+main: work.caion.plugin.pixellogin.PixelLoginPlugin
+author: CaIon
+version: 1.0
+softdepend:
+  - AuthMe
+commands:
+  plp:
