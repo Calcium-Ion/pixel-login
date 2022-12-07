@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PixelLoginPlugin:jar">
+    <output-path>$PROJECT_DIR$/../../../../[TestServer]Spigot/plugins</output-path>
+    <root id="archive" name="PixelLoginPlugin.jar">
+      <element id="module-output" name="PixelLoginPlugin" />
+    </root>
+  </artifact>
+</component>

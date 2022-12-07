@@ -16,4 +16,14 @@ public class AuthMeLoginHandler implements LoginHandler {
     public boolean login(String username, String password) {
         return AuthMeApi.getInstance().checkPassword(username, password);
     }
+
+    @Override
+    public boolean hasUser(String username) {
+        return AuthMeApi.getInstance().isRegistered(username);
+    }
+
+    @Override
+    public void register(String username, String password) {
+        AuthMeApi.getInstance().registerPlayer(username, password);
+    }
 }

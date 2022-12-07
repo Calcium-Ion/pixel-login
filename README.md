@@ -1,8 +1,9 @@
-用于对接现有的登录插件以适配PixelWeb，不会影响现有的玩家登录数据  
-当前仅支持AuthMe登录插件，内置HttpServer，请在配置文件中修改相关配置
+# PixelLogin  
 
-指令：  
-重启插件/plp reload
+用于对接现有的登录插件以适配PixelWeb，不会影响现有的玩家登录数据，目前仅支持AuthMe  
+
+前置插件：
+- [PixelCore](https://github.com/Calcium-Ion/PixelCorePlugin)
   
 配置文件
 ```yaml
