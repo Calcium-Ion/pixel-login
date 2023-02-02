@@ -5,7 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
-import work.caion.plugin.pixellogin.action.HttpActionHandler;
+import work.caion.plugin.pixellogin.action.ActionHandler;
 import work.caion.plugin.pixellogin.login.AuthMeLoginHandler;
 import work.caion.plugin.pixellogin.login.LoginHandler;
 
@@ -17,7 +17,7 @@ public class PixelLoginPlugin extends JavaPlugin {
 
     LoginHandler loginHandler = null;
 
-    static HttpActionHandler actionHandler;
+    static ActionHandler actionHandler;
 
     static PixelLoginPlugin instance;
 
@@ -47,7 +47,7 @@ public class PixelLoginPlugin extends JavaPlugin {
 
     public void reload() {
         getLogger().info("================" + prefix + "================");
-        getLogger().info("正在加载附属" + prefix);
+        getLogger().info("正在加载PixelCore附属" + prefix);
         reloadConfig();
         String type = getConfig().getString("type");
         if (StrUtil.equals("auto", type)) {
@@ -59,7 +59,7 @@ public class PixelLoginPlugin extends JavaPlugin {
         if (loginHandler == null) {
             getLogger().info("登录前置加载失败，当前仅支持AuthMe登录方式！");
         } else {
-            actionHandler = new HttpActionHandler(loginHandler);
+            actionHandler = new ActionHandler(loginHandler);
         }
         getLogger().info("================" + prefix + "================");
     }
